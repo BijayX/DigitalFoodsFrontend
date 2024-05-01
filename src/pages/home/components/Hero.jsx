@@ -26,7 +26,7 @@ const Hero = () => {
                                 </button>
                             </div>
                         </form>
-                        <p className="mt-8 text-gray-700 lg:w-10/12">Sit amet consectetur adipisicing elit. <a href="#" className="text-yellow-700">connection</a> tenetur nihil quaerat suscipit, sunt dignissimos.</p>
+                        <p className="mt-8 text-gray-700 lg:w-10/12">Feast your senses, one bite at a time: Your <a href="#" className="text-yellow-700"> culinary </a> journey starts here.</p>
                     </div>
                     <div className="ml-auto -mb-24 lg:-mb-100 lg:w-6/12">
                         <img src="https://tailus.io/sources/blocks/food-delivery/preview/images/food.webp" className="relative" alt="food illustration" loading="lazy" width="4500" height="4500" />
