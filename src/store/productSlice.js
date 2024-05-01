@@ -57,7 +57,7 @@ export const fetchProducts = createAsyncThunk('products/fetch',async()=>{
 //     return async function fetchProductThunk(dispatch){
 //         dispatch(setStatus(STATUSES.LOADING))
 //         try {
-//             const response = await axios.get("http://localhost:3000/api/products")
+//             const response = await axios.get("https://digitalfoodbackend.onrender.com/api/products")
 //             dispatch(setProducts(response.data.data))
 //            dispatch(setStatus(STATUSES.SUCCESS))
 //         } catch (error) {
