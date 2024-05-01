@@ -82,7 +82,7 @@ const CheckOut = () => {
   {products.length > 0 && products.map((product)=>{
     return (
         <div key={product.product._id} className="flex flex-col rounded-lg bg-white sm:flex-row">
-        <img className="m-2 h-24 w-28 rounded-md border object-cover object-center" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+        <img className="m-2 h-24 w-28 rounded-md border object-cover object-center" src= {product.product.productImage} alt="" />
         <div className="flex w-full flex-col px-4 py-4">
           <span className="font-semibold">{product.product.productName}</span>
           <span className="float-right text-gray-400">Qty :{product.quantity} </span>
