@@ -41,10 +41,10 @@ import {Link, useNavigate} from 'react-router-dom'
       </div>
     }
     if(status == "error"){
-      return <h1>Error ! Something went wrong</h1>
+      return <h1 style={{ textAlign: 'center' }}>Error ! Something went wrong</h1>
     }
     if (products.length === 0) {
-      return <h1>No products available</h1>
+      return <h1 style={{ textAlign: 'center' }}>No products available</h1>
     }
     
 
