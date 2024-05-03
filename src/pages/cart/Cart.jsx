@@ -10,7 +10,7 @@ const Cart = () => {
     console.log(products)
 
     const totalItemsInCart = products.reduce((total,item)=>item.quantity + total,0)
-    const totalAmountOfCart = products.reduce((amount,item)=> item.quantity * item.product.productPrice + amount,0)
+    const totalAmountOfCart = products.reduce((amount,item)=> item.quantity * item.product?.productPrice + amount,0)
 
   const handleQuantityChange = (productId, newQuantity)=>{
     dispatch(udpateCartItem(productId,newQuantity))
@@ -27,12 +27,12 @@ const Cart = () => {
       <div className="rounded-lg md:w-2/3">
      {products.map((product)=>{
         return (
-            <div key={product.product._id} className="justify-between p-6 mb-6 bg-white rounded-lg shadow-md sm:flex sm:justify-start">
-            <img src={product.product.productImage} alt="product-image" className="w-full rounded-lg sm:w-40" />
+            <div key={product.product?._id} className="justify-between p-6 mb-6 bg-white rounded-lg shadow-md sm:flex sm:justify-start">
+            <img src={product.product?.productImage} alt="product-image" className="w-full rounded-lg sm:w-40" />
             <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">
               <div className="mt-5 sm:mt-0">
-                <h2 className="text-lg font-bold text-gray-900">{product.product.productName}</h2>
-                <p className="mt-1 text-xs text-gray-700">{product.product.productPrice}</p>
+                <h2 className="text-lg font-bold text-gray-900">{product.product?.productName}</h2>
+                <p className="mt-1 text-xs text-gray-700">{product.product?.productPrice}</p>
               </div>
               <div className="flex justify-between mt-4 sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
                 <div className="flex items-center border-gray-100">
@@ -40,7 +40,7 @@ const Cart = () => {
                   <input className="w-8 h-8 text-xs text-center bg-white border outline-none" type="number" value={product.quantity} min="1" onChange={(e)=>handleQuantityChange(product.product._id,e.target.value)}  />
                   <span className="px-3 py-1 duration-100 bg-gray-100 rounded-r cursor-pointer hover:bg-blue-500 hover:text-blue-50" onClick={()=>handleQuantityChange(product.product._id,product.quantity + 1)} > + </span>
                 </div>
-                <div className="flex items-center space-x-4" onClick={()=>handleDelete(product.product._id)} >
+                <div className="flex items-center space-x-4" onClick={()=>handleDelete(product.product?._id)} >
                   <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 duration-150 cursor-pointer hover:text-red-500">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                   </svg>
