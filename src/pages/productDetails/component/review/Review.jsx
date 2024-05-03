@@ -9,7 +9,7 @@ const Review = () => {
       <div className="md:flex">
         
         <div className="md:flex-shrink-0">
-          <img className="h-60 w-full object-cover md:w-40" src="/public/review.jpg" alt="Review Image" />
+          <img className="h-60 w-full object-cover md:w-40" src="/review.jpg" alt="Review Image" />
         </div>
         <div className="p-8">
           <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Review</div>
