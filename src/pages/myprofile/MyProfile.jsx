@@ -42,7 +42,7 @@ const MyProfile = () => {
                         <img className="mx-auto h-auto w-full rounded-full" src="/imgo.png" alt="image" />
                     </div>
                     <h1 className="my-1 text-center text-xl font-bold leading-8 text-gray-900">{userData.userName}</h1> 
-                    <h3 className="font-lg text-semibold text-center leading-6 text-gray-600"><span className="rounded-full bg-green-200 py-1 px-2 text-xs font-medium text-green-700">{userData.role}</span></h3>
+                    <h3 className="font-lg text-semibold text-center font-bold leading-6 text-gray-600">{userData.role}</h3>
                     <p className="text-center text-sm leading-6 text-gray-500 hover:text-gray-600"> {greeting}.  We're here to make your shopping experience delightful! Don't hesitate to reach out to our friendly customer support team if you need any assistance.</p>
                     <ul className="mt-3 divide-y rounded bg-gray-100 py-2 px-3 text-gray-600 shadow-sm hover:text-gray-700 hover:shadow">
                         <li className="flex items-center py-3 text-sm">
