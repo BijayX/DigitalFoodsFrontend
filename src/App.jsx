@@ -22,6 +22,7 @@ import ResetPassword from './pages/auth/resetPassword/ResetPassword'
 // import AdminDashboard from './pages/admin/dashboard/AdminDashboard'
 // import ProtectedRoute, { ProctectedRouteForVendor } from './pages/ProtectRoute'
 import {io} from 'socket.io-client'
+import MyProfile from './pages/myprofile/MyProfile'
 export const socket = io("https://digitalfoodbackend.onrender.com/",{
   auth : {
     token : localStorage.getItem('token')
@@ -55,6 +56,7 @@ function App() {
    <Route path="/forgotpassword" element={<ForgotPassword />} />
    <Route path="/verifyotp" element={<VerifyOtp />} />
    <Route path="/resetpassword" element={<ResetPassword />} />
+   <Route path="/myprofile" element={<MyProfile />} />
    {/* <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
    <Route path="/forgotpassword" element={<ForgotPassword />} />
    {/* <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />

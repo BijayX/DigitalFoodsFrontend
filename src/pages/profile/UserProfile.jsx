@@ -35,6 +35,12 @@ const UserProfile = () => {
                             My Orders
                         </Link>
                         </div>
+                        <div className="flex flex-col items-start justify-center rounded-2xl bg-white bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none" style={{border:'1px solid navy',display:'flex',alignItems:'center',justifyContent:'center'}}>
+                        
+                        <Link to='/myprofile' className="text-base font-medium text-blue-700 dark:text-dark">
+                            My Profile
+                        </Link>
+                        </div>
                     </div>
                 </div>  
              
