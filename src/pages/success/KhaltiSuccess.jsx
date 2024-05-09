@@ -4,6 +4,8 @@ import Loader from '../../globals/components/loader/Loader'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { emptyCart } from '../../store/cartSlice'
+import { toast } from 'react-toastify';
+
 
 const KhaltiSuccess = () => {
     const queryParams = new URLSearchParams(location.search)
@@ -16,8 +18,7 @@ const KhaltiSuccess = () => {
         const response = await APIAuthenticated.post("/payment/verifypidx",{pidx})
         if(response.status === 200){
             setLoading(false)
-            alert(response.data.message)
-            // state bata pani cart clear 
+            toast.success(response.data.message)            // state bata pani cart clear 
             dispatch(emptyCart())
             window.location.href = "/"
         }
