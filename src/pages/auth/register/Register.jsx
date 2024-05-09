@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux"
 import { registerUser } from "../../../store/authSlice"
 import { STATUSES } from "../../../globals/misc/statuses"
 import {Link, useNavigate } from "react-router-dom"
+import { toast } from 'react-toastify';
+
 
 const Register = () => {
   const navigate = useNavigate()
@@ -31,8 +33,7 @@ const Register = () => {
       return navigate("/login")
     }
     if (status === STATUSES.ERROR) {
-      alert("Something Went Wrong, Try again")
-      return;
+      toast.error("Reclick the sigin button");
     }
 
   }

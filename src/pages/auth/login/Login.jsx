@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { loginUser } from "../../../store/authSlice"
 import { STATUSES } from "../../../globals/misc/statuses"
 import { Link, useNavigate } from "react-router-dom"
+import { toast } from 'react-toastify';
 
 const Login = () => {
   const dispatch = useDispatch()
@@ -31,6 +32,10 @@ const Login = () => {
     //     alert("Something went wrong, Try again")
     //     return;
     //  }
+
+    if (status === STATUSES.ERROR) {
+      toast.error("Invalid email or password");
+    }
   }
 
   return (

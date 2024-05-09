@@ -5,6 +5,7 @@ import { createOrder } from '../../store/checkoutSlice'
 import { STATUSES } from '../../globals/misc/statuses'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { toast } from 'react-toastify';
 import { APIAuthenticated } from '../../http'
 
 const CheckOut = () => {
@@ -35,7 +36,7 @@ const CheckOut = () => {
    const proceedForKhaltiPayment = ()=>{
     const currentOrder = data[data.length -1]
     if(status === STATUSES.SUCCESS && paymentMethod === "COD" ){
-        return alert("Order placed successfully")
+      toast.success('Order placed successfully');
      }  
     if(status === STATUSES.SUCCESS && paymentMethod === "khalti" ){
         const {totalAmount,_id:orderId} = data[data.length -1]

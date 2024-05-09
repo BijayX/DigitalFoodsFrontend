@@ -1,5 +1,5 @@
 import {  createSlice } from "@reduxjs/toolkit";
-
+import { toast } from 'react-toastify';
 import { STATUSES } from "../globals/misc/statuses";
 import {API, APIAuthenticated} from "../http";
 
@@ -77,7 +77,7 @@ export function loginUser(data){
                 window.location.href = "/"
             }
         } catch (error) {
-            alert("Something went wrong")
+            toast.error("Invalid email or password");
             dispatch(setStatus(STATUSES.ERROR))
         }
     }
