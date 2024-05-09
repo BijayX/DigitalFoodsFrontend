@@ -7,6 +7,7 @@ import { emptyCart } from '../../store/cartSlice'
 import { toast } from 'react-toastify';
 
 
+
 const KhaltiSuccess = () => {
     const queryParams = new URLSearchParams(location.search)
     const navigate = useNavigate()
@@ -18,9 +19,17 @@ const KhaltiSuccess = () => {
         const response = await APIAuthenticated.post("/payment/verifypidx",{pidx})
         if(response.status === 200){
             setLoading(false)
-            toast.success(response.data.message)            // state bata pani cart clear 
-            dispatch(emptyCart())
-            window.location.href = "/"
+            // toast.success(response.data.message)            // state bata pani cart clear 
+            // dispatch(emptyCart())
+            // window.location.href = "/"
+            addToast(response.data.message, {
+                appearance: 'success',
+                autoDismiss: false,
+                onDismiss: () => {
+                    dispatch(emptyCart())
+                    window.location.href = "/"
+                }
+            })
         }
       } catch (error) {
         console.log(error)
