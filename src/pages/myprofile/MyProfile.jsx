@@ -39,7 +39,7 @@ const MyProfile = () => {
                 <div className="rounded-lg border bg-white px-4 pt-8 pb-10 shadow-lg">
                     <div className="relative mx-auto w-36 rounded-full">
                         <span className="absolute right-0 m-3 h-3 w-3 rounded-full bg-green-500 ring-2 ring-green-300 ring-offset-2"></span>
-                        <img className="mx-auto h-auto w-full rounded-full" src="/public/imgo.png" alt="" />
+                        <img className="mx-auto h-auto w-full rounded-full" src="/imgo.png" alt="image" />
                     </div>
                     <h1 className="my-1 text-center text-xl font-bold leading-8 text-gray-900">{userData.userName}</h1> {/* Display user name */}
                     <h3 className="font-lg text-semibold text-center leading-6 text-gray-600">{userData.role}</h3>
